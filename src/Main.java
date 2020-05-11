@@ -52,10 +52,10 @@ public class Main {
 
         Automate indentAutomaton = new Automate(s0i, s1i);
         indentAutomaton.addKeyWords(
-                "program","end","break",
-                "begin","while","for","if",
-                "do","true","false","form",
-                "not", "then","else","and","or"
+                "program", "end", "break", "begin",
+                "while", "for", "if", "do",
+                "true", "false", "from", "not",
+                "then", "else", "and", "or", "to"
         );
 
         System.out.print(indentAutomaton);
