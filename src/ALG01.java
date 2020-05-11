@@ -25,7 +25,6 @@ public class ALG01 {
                 if(word.isBlank()) continue;
 
                 String admitted = this._identAutomaton.wordAdmitted(word);
-                System.out.println("Word : " + word + "; admitted : " + admitted);
 
                 if(admitted.equals("keyWord")) sb.append(" ").append(word);
                 else if(admitted.equals("final")) sb.append(" ident");

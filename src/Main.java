@@ -67,6 +67,7 @@ public class Main {
         if(args.length <= 0) System.out.println("Usage : java Main [Filepath]");
         else {
             try {
+                System.out.println("\nResult :");
                 System.out.println(analysis.execute(new File(args[0])));
             } catch (FileNotFoundException e) {
                 System.out.println("File not found");
