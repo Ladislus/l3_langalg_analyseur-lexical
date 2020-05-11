@@ -1,0 +1,12 @@
+program p6
+begin
+    i <- 0 ; r <- true
+    while i < n-1 do
+        if t[i] > t[i+1] then
+            r <- false ;
+            break
+        else r <- true
+    end ;
+    i <- i+1
+    end
+end

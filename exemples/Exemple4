@@ -1,0 +1,8 @@
+program p4
+begin
+    i <- 100 ;
+    z <- 1;
+    while y > 0 do
+        z <- z*t[i]
+    end
+end

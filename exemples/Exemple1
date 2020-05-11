@@ -1,0 +1,6 @@
+program p1
+begin
+    z <- x ;
+    x <- y ;
+    y <- z
+end
