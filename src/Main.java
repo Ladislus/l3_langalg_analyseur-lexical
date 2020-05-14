@@ -26,7 +26,8 @@ public class Main {
 
         Automate numberAutomaton = new Automate(s0e, s1e, s2e, s3e);
 
-        System.out.println(numberAutomaton);
+//        [DEBUG]
+//        System.out.println(numberAutomaton);
 
         ///////////////////////////////////////////////////////////////////////////////////////
 
@@ -57,7 +58,8 @@ public class Main {
                 "then", "else", "and", "or", "to"
         );
 
-        System.out.print(indentAutomaton);
+//        [DEBUG]
+//        System.out.print(indentAutomaton);
 
         ///////////////////////////////////////////////////////////////////////////////////////
 
