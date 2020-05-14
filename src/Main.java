@@ -1,6 +1,5 @@
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.util.Objects;
 
 public class Main {
 
@@ -69,10 +68,12 @@ public class Main {
             try {
                 System.out.println("\nResult :");
                 System.out.println(analysis.execute(new File(args[0])));
-            } catch (FileNotFoundException e) {
+            } catch(FileNotFoundException e) {
                 System.out.println("File not found");
                 e.printStackTrace();
-
+            } catch(InvalidCharacterException e) {
+                System.out.println("Invalid character found");
+                e.printStackTrace();
             }
         }
     }

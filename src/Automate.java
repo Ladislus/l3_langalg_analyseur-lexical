@@ -9,27 +9,31 @@ public class Automate {
     private final Collection<Etat> _states = new ArrayList<>();
     private final Collection<String> _keyWords = new ArrayList<>();
 
+    /**
+     * Constructor
+     *
+     * @param start The starting state
+     * @param states All the remaining states
+     */
     public Automate(Etat start, Etat... states) {
         this._start = start;
         this._states.addAll(Arrays.asList(states));
     }
 
-    public Etat getStart() {
-        return this._start;
-    }
-
-    public Collection<Etat> getStates() {
-        return this._states;
-    }
-
+    /**
+     * Function to add special keywords to the automaton
+     *
+     * @param keyWords A list of keywords
+     */
     public void addKeyWords(String... keyWords) {
         this._keyWords.addAll(Arrays.asList(keyWords));
     }
 
-    public Collection<String> getKeyWords() {
-        return this._keyWords;
-    }
-
+    /**
+     * Function to test whether a given String is recognized by this automaton
+     * @param word String to test
+     * @return String 'missingTransition' if invalid, 'notFinal' if incomplet (didn't reach a final state), 'keyWord' if it is a keyword, 'final' if valid
+     */
     public String wordAdmitted(String word) {
         if(!this._keyWords.contains(word)) {
             Etat currentState = this._start;
@@ -53,6 +57,11 @@ public class Automate {
         }
     }
 
+    /**
+     * ToString
+     *
+     * @return The automaton as String
+     */
     public String toString() {
         StringBuilder sb = new StringBuilder(this._start.toString()).append("\n");
         for(Etat e : this._states) {
