@@ -59,7 +59,7 @@ public class ALG01 {
                 }
             }
         }
-        return sb.toString().trim();
+        return compact(sb.toString()).trim();
     }
 
     /**
@@ -82,5 +82,33 @@ public class ALG01 {
                 .replaceAll(">", " > ")
                 .replaceAll("==", " == ")
                 .replaceAll("< -","<-");
+    }
+
+    /**
+     * Function to remove unnecessary spaces after treatment
+     *
+     * @param s String to sanitize
+     * @return String without useless spaces
+     */
+    private String compact(String s){
+        return s.replaceAll("\\[ *", " [ ")
+                .replaceAll(" *] *"," ] ")
+                .replaceAll(" *; *"," ; ")
+                .replaceAll(" *\\+"," + ")
+                .replaceAll(" +- *"," - ")
+                .replaceAll(" *\\* *"," * ")
+                .replaceAll(" */ *"," / ")
+                .replaceAll(" *\\+ *"," + ")
+                .replaceAll(" *\\. *",".")
+                .replaceAll(" +<-"," <- ")
+                .replaceAll("< -","<-");
+
+
+                /* decommenter ça pour enlever les espaces apre_s les bool
+                .replaceAll(" *== *","==")
+                .replaceAll(" +< +","<")
+                .replaceAll(" +> +",">");
+                */
+
     }
 }
