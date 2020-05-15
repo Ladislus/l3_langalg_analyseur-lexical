@@ -10,6 +10,7 @@ pour la relecture, une version haute qualité est disponible sur [Google Drive](
 
 ## Lancement des programmes
 Vous trouverez une version compilé en fichier .jar dans le dossier `out/`.  
+Les développement a été fait sous Java 13.0.1, et les deux fichiers jar sont également compilés sous cette version.  
 
 ### Automaton.jar
 le fichier .jar contenu dans le dossier automaton_jar est la programme qui concerne la partie 1.  
