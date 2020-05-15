@@ -1,5 +1,9 @@
 # DM Langage Algébrique - Ladislas WALCAK
 
+## Le Rendu
+Le PDF contenant les réponses aux questions se trouve dans le dossier `resources` ([ici](resources/DM Ladislas WALCAK.pdf)).  
+La questions écrites pour la partie 1 et 2 y sont renseignées.
+
 ## Lancement des programmes
 Vous trouverez une version compilé en fichier .jar dans le dossier `out/`.  
 Le dossier `resources/` contient le sujet, le PDF de rendu ainsi que les annexes utilisées durant le développement.
