@@ -1,12 +1,11 @@
 # DM Langage Algébrique - Ladislas WALCAK
 
-## Le Rendu
+## Le Projet
 Le PDF contenant les réponses aux questions se trouve dans le dossier `resources` ([ici](resources/DM Ladislas WALCAK.pdf)).  
-La questions écrites pour la partie 1 et 2 y sont renseignées.
+La questions écrites pour la partie 1 et 2 y sont renseignées. Ce dossier contient également une copie du sujet, ainsi que les annexes utilisées durant le DM.  
 
 ## Lancement des programmes
 Vous trouverez une version compilé en fichier .jar dans le dossier `out/`.  
-Le dossier `resources/` contient le sujet, le PDF de rendu ainsi que les annexes utilisées durant le développement.
 
 ### Automaton.jar
 le fichier .jar contenu dans le dossier automaton_jar est la programme qui concerne la partie 1.  
@@ -14,7 +13,7 @@ Afin de le lancer, rendez vous dans le dossier (out/automaton_jar/), puis effect
 
 `java -jar dm_langage_algebrique_walcak.jar "[path]" `  
 
-Il faudra remplacer l'argument [path] par le chemin (absolu de préférence) vers un fichier contenant de l'ALG01.  
+Il faudra remplacer l'argument [path] par le chemin (absolu de préférence) vers un fichier contenant de l'ALG01.  Les exemples fournis se trouvent dans le dossier `exemples`.  
  
 Le programme est divisé tel que :
  - La classe ALG01 contient les deux automates pour la reconnaissance des nombres & des identifiers.  
