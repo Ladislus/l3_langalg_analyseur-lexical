@@ -14,6 +14,14 @@ public class Grammaire {
     private Map<String, Set<String>> _first;
     private Map<String, Set<String>> _next;
 
+    /**
+     * Constructor
+     *
+     * @param axiom String containing the axiom
+     * @param terms Collection of terminal Strings
+     * @param notTerms Collection of non-terminal Strings
+     * @param productions Map containing all production rules for the non-terminal String
+     */
     public Grammaire(String axiom, Collection<String> terms, Collection<String> notTerms, Map<String, Set<String>> productions) {
         this._axiom = axiom;
         this._terms.addAll(terms);
@@ -21,6 +29,9 @@ public class Grammaire {
         this._productions = productions;
     }
 
+    /**
+     * Function used to launch the analysis, and display it
+     */
     public void execute() {
         if(this._first == null) this._first = getFirst();
         if(this._next == null) this._next = getNext();
@@ -29,6 +40,11 @@ public class Grammaire {
         printMap("Suivant", this._next);
     }
 
+    /**
+     * Function used to print first & next Maps
+     * @param msg String to display before displaying Maps
+     * @param map Map to display
+     */
     private void printMap(String msg, Map<String, Set<String>> map) {
         System.out.println(msg + " :");
         for (String s : map.keySet()) {
@@ -41,10 +57,20 @@ public class Grammaire {
         System.out.println("\n");
     }
 
+    /**
+     * Function to test if the character is equal to epsilon
+     * @param s String to test
+     * @return true if s is equal to epsilon, or false
+     */
     private boolean isEpsilon(String s) {
         return s.equals(EPSILON);
     }
 
+    /**
+     * Function to launch the analysis of the first Set for non-terminal characters
+     *
+     * @return Set containing the Strings
+     */
     private Map<String, Set<String>> getFirst() {
         Map<String, Set<String>> res = new HashMap<>();
 
@@ -56,6 +82,13 @@ public class Grammaire {
         return res;
     }
 
+    /**
+     * Function to process the first Set for a given non-terminal character
+     *
+     * @param nt String to test (the non-terminal)
+     *
+     * @return Set of characters
+     */
     private Set<String> processFirst(String nt) {
         Set<String> res = new HashSet<>();
 
@@ -134,6 +167,11 @@ public class Grammaire {
         return res;
     }
 
+    /**
+     * Function to launch the analysis of the next Set for non-terminal characters
+     *
+     * @return Set containing the Strings
+     */
     private Map<String, Set<String>> getNext() {
         Map<String, Set<String>> res = new HashMap<>();
 
@@ -145,6 +183,13 @@ public class Grammaire {
         return res;
     }
 
+    /**
+     * Function to process the next Set for a given non-terminal character
+     *
+     * @param s String to test (the non-terminal)
+     *
+     * @return Set of characters
+     */
     private Set<String> processNext(String s){
         Set<String> res = new HashSet<>();
         if(this._axiom.equals(s)){
