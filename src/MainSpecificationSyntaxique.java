@@ -1,7 +1,9 @@
+import SpecificationSyntaxique.*;
+
 import java.io.File;
 import java.io.FileNotFoundException;
 
-public class Main {
+public class MainSpecificationSyntaxique {
 
     public static void main(String[] args) {
 
