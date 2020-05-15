@@ -217,9 +217,9 @@ public class Grammaire {
 
             }
         }
-        if(res.isEmpty()){
-            res.add("$");
-        }
+//        if(res.isEmpty()){
+//            res.add("$");
+//        }
         return res;
     }
 }
