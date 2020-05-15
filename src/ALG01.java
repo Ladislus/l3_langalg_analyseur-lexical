@@ -7,7 +7,7 @@ import java.util.Scanner;
 public class ALG01 {
 
     private static final Collection<String> _OPERATORS = Arrays.asList(
-            "*", "-", "+", "/", "%",
+            "*", "-", "+", "/", "%", "=",
             "<", "<=", ">", ">=", "==", "<-");
 
     private static final Collection<String> _SPECIALS = Arrays.asList(
@@ -102,13 +102,5 @@ public class ALG01 {
                 .replaceAll(" *\\. *",".")
                 .replaceAll(" +<-"," <- ")
                 .replaceAll("< -","<-");
-
-
-                /* decommenter ça pour enlever les espaces apre_s les bool
-                .replaceAll(" *== *","==")
-                .replaceAll(" +< +","<")
-                .replaceAll(" +> +",">");
-                */
-
     }
 }
